@@ -24,7 +24,7 @@ public class SettingsActivity extends PreferenceActivity {
         Preference updatePref = findPreference("pref_etc_check_update");
         updatePref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             public boolean onPreferenceClick(Preference preference) {
-                new UpdateTask(getApplicationContext()).execute("https://api.github.com/repos/ray26/candy-cream/releases/latest");
+                new UpdateTask(getApplicationContext(),true).update();
                 return false;
             }
         });
@@ -56,5 +56,11 @@ public class SettingsActivity extends PreferenceActivity {
 
     public void performBack(View view) {
         super.onBackPressed();
+    }
+
+    public void enterAccessibilityPage(View view) {
+        Intent mAccessibleIntent =
+                new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS);
+        startActivity(mAccessibleIntent);
     }
 }

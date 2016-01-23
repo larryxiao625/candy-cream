@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import candy.cream.hongbao.R;
 import im.fir.sdk.FIR;
+import candy.cream.hongbao.utils.UpdateTask;
 
 
 import java.lang.reflect.Field;
@@ -88,6 +89,9 @@ public class MainActivity extends Activity {
     protected void onResume() {
         super.onResume();
         updateServiceStatus();
+
+        // Check for update
+        new UpdateTask(this, false).update();
     }
 
     @Override
@@ -121,7 +125,7 @@ public class MainActivity extends Activity {
     }
 
     public void openGithub(View view) {
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("git@github.com:ray26/candy-cream.git"));
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/ray26/candy-cream"));
         startActivity(browserIntent);
     }
 
