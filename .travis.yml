@@ -25,7 +25,7 @@ deploy:
   provider: releases
   api_key:
     secure: amok0QM+7CXEwaXy4HC2b3FIPsedlr+nGeoDk4eFww4f2zjNr6j7FOwz9R1zV9ZeEUfRWkhsClmSl2kIOT7PJa6/53QYLUFyNSlqIXxTiPyuT37GeHgWOWptMjTHC+zkvfLX5/CScW4VscVMHe7FA1H8HAPyNvButl45McprHAoKtSINb+rollL6Q2NSkq239pRhNtgUILI/ON0MjRRng++Y7aL8mAZvacv7fSM3fFMMlvWIMz4kLQNcgHr5AHJa6leIEnLfyhkGBirrRKekXdU4qWcoef9FR8ALpTBa0rhq5syMctAOwxDYsq6YLtpRNpwpOMwk7SAx2egwqJckgBKf0TXSVumy2uF3qcoQQFFJecsoPYEKxY0ehkZNWozGAJyb1amsPiTMEYbTsVUuSVWTUp+r1NMOPG7fSoSyHTjNwvwGkvtx/s5m9YgJ90gETqwcpsEaCKFskI0zxLkXGGi1D2Mvnh2YSinERKc3gJ4JT6aPowbtwl2G0Hum9KIlEjdHiut9GfacAhJJo/gCIbI559uIrAbgbJSnMrFrIhEFg2eKADg+yQGhbLo86ve+KlV12U3k+GzAHi36Z++xX63xTKeI+Eqpf9ukimVL0XrhW/PA4i4vqzpakEWomZb72MmuTTbjx5cleB8Nv90Fb2+q/uzzkSd/YlMi48OYbWg=
-  file: app/build/outputs/apk/app-release.spk
+  file: app/build/outputs/apk/app-release.apk
   skip_cleanup: true
   on:
     tags: true
