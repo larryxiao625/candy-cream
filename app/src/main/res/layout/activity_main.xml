@@ -52,7 +52,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="https://github.com/geeeeeeeeek/WeChatLuckyMoney"
+            android:text="https://github.com/ray26/candy-cream"
             android:id="@+id/github" android:gravity="center_horizontal"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true" android:layout_marginBottom="20dp" android:layout_marginTop="20dp"

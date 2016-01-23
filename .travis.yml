@@ -1,0 +1,39 @@
+language: android
+sudo: false
+jdk: oraclejdk7
+env:
+  matrix:
+  - ANDROID_TARGET=android-21  ANDROID_ABI=armeabi-v7a armeabi
+android:
+  components:
+  - platform-tools
+  - build-tools-21.1.1
+  - android-L
+  - extra
+before_install:
+- openssl aes-256-cbc -K $encrypted_0425c514ae80_key -iv $encrypted_0425c514ae80_iv
+  -in candy-cream.jks.enc -out candy-cream.jks -d
+before_script:
+- echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
+- emulator -avd test -no-skin -no-audio -no-window &
+- adb wait-for-device
+- adb shell input keyevent 82 &
+- gem install fir-cli
+script:
+- ./gradlew assembleRelease
+deploy:
+  provider: releases
+  api_key:
+    secure: amok0QM+7CXEwaXy4HC2b3FIPsedlr+nGeoDk4eFww4f2zjNr6j7FOwz9R1zV9ZeEUfRWkhsClmSl2kIOT7PJa6/53QYLUFyNSlqIXxTiPyuT37GeHgWOWptMjTHC+zkvfLX5/CScW4VscVMHe7FA1H8HAPyNvButl45McprHAoKtSINb+rollL6Q2NSkq239pRhNtgUILI/ON0MjRRng++Y7aL8mAZvacv7fSM3fFMMlvWIMz4kLQNcgHr5AHJa6leIEnLfyhkGBirrRKekXdU4qWcoef9FR8ALpTBa0rhq5syMctAOwxDYsq6YLtpRNpwpOMwk7SAx2egwqJckgBKf0TXSVumy2uF3qcoQQFFJecsoPYEKxY0ehkZNWozGAJyb1amsPiTMEYbTsVUuSVWTUp+r1NMOPG7fSoSyHTjNwvwGkvtx/s5m9YgJ90gETqwcpsEaCKFskI0zxLkXGGi1D2Mvnh2YSinERKc3gJ4JT6aPowbtwl2G0Hum9KIlEjdHiut9GfacAhJJo/gCIbI559uIrAbgbJSnMrFrIhEFg2eKADg+yQGhbLo86ve+KlV12U3k+GzAHi36Z++xX63xTKeI+Eqpf9ukimVL0XrhW/PA4i4vqzpakEWomZb72MmuTTbjx5cleB8Nv90Fb2+q/uzzkSd/YlMi48OYbWg=
+  file: app/build/outputs/apk/apk-release.spk
+  skip_cleanup: true
+  on:
+    tags: true
+
+before_cache:
+    - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+

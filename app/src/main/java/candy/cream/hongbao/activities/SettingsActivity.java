@@ -23,7 +23,7 @@ public class SettingsActivity extends PreferenceActivity {
         Preference updatePref = findPreference("pref_etc_check_update");
         updatePref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             public boolean onPreferenceClick(Preference preference) {
-                new UpdateTask(getApplicationContext()).execute("https://api.github.com/repos/geeeeeeeeek/WeChatLuckyMoney/releases/latest");
+                new UpdateTask(getApplicationContext()).execute("https://api.github.com/repos/ray26/candy-cream/releases/latest");
                 return false;
             }
         });
@@ -32,7 +32,7 @@ public class SettingsActivity extends PreferenceActivity {
         Preference issuePref = findPreference("pref_etc_issue");
         issuePref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             public boolean onPreferenceClick(Preference preference) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/geeeeeeeeek/WeChatLuckyMoney/issues"));
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/ray26/candy-cream/issues"));
                 browserIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 SettingsActivity.this.startActivity(browserIntent);
                 return false;
