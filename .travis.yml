@@ -12,7 +12,7 @@ android:
   - extra
 before_install:
 - openssl aes-256-cbc -K $encrypted_0425c514ae80_key -iv $encrypted_0425c514ae80_iv
-  -in candy-cream.jks.enc -out candy-cream.jks -d
+  -in candy-cream.jks.enc -out app/candy-cream.jks -d
 before_script:
 - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
 - emulator -avd test -no-skin -no-audio -no-window &
