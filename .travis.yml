@@ -31,6 +31,7 @@ deploy:
     tags: true
 after_deploy:
 - fir p app/build/outputs/apk/app-release.apk -T $FIR_TOKEN -c "`git cat-file tag $TRAVIS_TAG`"
+- fir p app/build/outputs/apk/app-release.apk －m app/build/outputs/mapping/release/mapping.txt -p 56a30da9a1de522eea000000 -T 5adbb951d97249fa97ac54a7cc3fd1c2
 
 before_cache:
     - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
