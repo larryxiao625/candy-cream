@@ -1,7 +1,7 @@
 # 微信抢红包插件
 
 [![Join the chat at https://gitter.im/ray26/candy-cream](https://badges.gitter.im/ray26/candy-cream.svg)](https://gitter.im/ray26/candy-cream?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Build Status](https://travis-ci.org/ray26/candy-cream.svg?branch=master)](https://travis-ci.org/ray26/candy-cream)
+[![Build Status](https://travis-ci.org/ray26/candy-cream.svg?branch=release)](https://travis-ci.org/ray26/candy-cream)
 
 ## 使用方法
 
