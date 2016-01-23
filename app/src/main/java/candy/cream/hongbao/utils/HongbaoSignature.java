@@ -1,10 +1,7 @@
-package xyz.monkeytong.hongbao.utils;
+package candy.cream.hongbao.utils;
 
 import android.view.accessibility.AccessibilityNodeInfo;
 
-/**
- * Created by Zhongyi on 1/21/16.
- */
 public class HongbaoSignature {
     private String sender, content, time;
 

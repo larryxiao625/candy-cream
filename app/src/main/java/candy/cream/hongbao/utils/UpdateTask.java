@@ -1,4 +1,4 @@
-package xyz.monkeytong.hongbao.utils;
+package candy.cream.hongbao.utils;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,15 +12,11 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONObject;
-import xyz.monkeytong.hongbao.R;
+import candy.cream.hongbao.R;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
-/**
- * Created by Zhongyi on 1/20/16.
- * Util for app update task.
- */
 public class UpdateTask extends AsyncTask<String, String, String> {
     private Context context;
 

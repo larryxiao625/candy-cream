@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="xyz.monkeytong.hongbao">
+          package="candy.cream.hongbao">
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -29,6 +29,7 @@
             <meta-data android:name="android.accessibilityservice"
                        android:resource="@xml/accessible_service_config"/>
         </service>
+        <meta-data android:value="3a57d98a4f5526270afcec1546f64b7f" android:name="BUG_HD_SDK_GENERAL_KEY" />
     </application>
 
 </manifest>

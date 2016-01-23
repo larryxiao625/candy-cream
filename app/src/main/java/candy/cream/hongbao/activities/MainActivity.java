@@ -1,4 +1,4 @@
-package xyz.monkeytong.hongbao.activities;
+package candy.cream.hongbao.activities;
 
 import android.accessibilityservice.AccessibilityServiceInfo;
 import android.app.Activity;
@@ -15,7 +15,8 @@ import android.view.accessibility.AccessibilityManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import xyz.monkeytong.hongbao.R;
+import candy.cream.hongbao.R;
+import im.fir.sdk.FIR;
 
 
 import java.lang.reflect.Field;
@@ -32,6 +33,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FIR.init(this);
         setContentView(R.layout.activity_main);
         switchPlugin = (Button) findViewById(R.id.button_accessible);
 

@@ -1,4 +1,4 @@
-package xyz.monkeytong.hongbao.activities;
+package candy.cream.hongbao.activities;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -6,12 +6,9 @@ import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.view.View;
-import xyz.monkeytong.hongbao.R;
-import xyz.monkeytong.hongbao.utils.UpdateTask;
+import candy.cream.hongbao.R;
+import candy.cream.hongbao.utils.UpdateTask;
 
-/**
- * Created by Zhongyi on 1/19/16.
- */
 public class SettingsActivity extends PreferenceActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
