@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
+import android.provider.Settings;
 import android.view.View;
 import candy.cream.hongbao.R;
 import candy.cream.hongbao.utils.UpdateTask;
