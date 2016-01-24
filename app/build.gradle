@@ -8,8 +8,8 @@ android {
         applicationId "candy.cream.hongbao"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 2
-        versionName "v2.1"
+        versionCode 3
+        versionName "v2.1.1"
     }
     android {
         signingConfigs {
